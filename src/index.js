@@ -15,9 +15,23 @@ const onClickAdd = () => {
   const p = document.createElement("p");
   p.innerHTML = inputText;
 
+  // buttonタグ生成
+  const fin_btn = document.createElement("button");
+  fin_btn.innerHTML = "完了";
+  fin_btn.addEventListener("click", () => {
+    alert("完了");
+  });
+  const del_btn = document.createElement("button");
+  del_btn.innerHTML = "削除";
+  del_btn.addEventListener("click", () => {
+    alert("削除");
+  });
+
   //liタグの子要素に各要素を設定
   li.appendChild(div);
   div.appendChild(p);
+  div.appendChild(fin_btn);
+  div.appendChild(del_btn);
 
   //未完了リストに追加
   document.getElementById("imcomplete-list").appendChild(li);
